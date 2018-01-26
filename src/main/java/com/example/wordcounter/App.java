@@ -8,6 +8,15 @@ public class App
     }
     
     public static int wordcount(String s) {
-        return 0;
+        	 if (Character.isLetter(s.charAt(i)) && i != endLine) {
+	            isWord = true;
+	        } else if (!Character.isLetter(s.charAt(i)) && isWord) {
+	            count++;
+	            isWord = false;
+	        } else if (Character.isLetter(s.charAt(i)) && i == endLine) {
+	            count++;
+	        }
+	    }
+	    return count;
     }
 }
